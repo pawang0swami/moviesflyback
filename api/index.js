@@ -75,6 +75,8 @@ let a= await Data.deleteOne({_id:r.params.id})
 R.send(a)
 })
 
+
+
 app.listen(4010, () => {
   console.log("ok");
 });
