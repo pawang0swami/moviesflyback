@@ -7,7 +7,12 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "https://moviesfly.vercel.app", // 👈 your Vercel site
+  credentials: true // optional if using cookies
+}));
+
 // app.use(express.urlencoded({ extended: true }));
 
 app.post("/singup", async (req, resp) => {
